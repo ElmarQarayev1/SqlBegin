@@ -1,0 +1,35 @@
+CREATE DATABASE LIBRARY
+
+USE LIBRARY
+
+CREATE TABLE BOOKS(
+    ID INT,
+    Name NVARCHAR(20),
+    Price NVARCHAR(20)
+)
+
+ALTER TABLE BOOKS
+ADD Author NVARCHAR(100),Genre NVARCHAR(100)
+
+ALTER TABLE BOOKS
+DROP COLUMN Genre
+
+INSERT INTO BOOKS
+VALUES
+(1,'salam',34,'saqol'),
+(2,'nece',3,'sen'),
+(3,'yaxsi',45,'sanmi'),
+(4,'isler',7,'gucler'),
+(5,'ozun',12,'necesen')
+
+SELECT * FROM BOOKS
+
+UPDATE BOOKS
+SET Price=10 WHERE Price<10
+
+SELECT * FROM BOOKS WHERE Price BETWEEN 10 AND 50
+
+
+SELECT * FROM BOOKS WHERE Name LIKE '%a%' OR Author LIKE '%a%'
+
+DELETE FROM BOOKS Where Price=10
